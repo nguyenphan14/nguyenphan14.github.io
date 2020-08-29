@@ -58,6 +58,16 @@ img.room-thumbnail {
     object-fit: cover;
 }
 
+.all-btn {
+    font-size: 1.2rem;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.all-btn:hover {
+    text-decoration: none;
+}
+
 /*SEARCH BAR*/
 #search-box{
     padding-left:0;

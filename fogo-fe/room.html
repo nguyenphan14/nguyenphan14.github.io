@@ -12,7 +12,7 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-fogo pt-0 pb-0">
     <div class="container">
-        <a class="navbar-brand mb-0" href="#">
+        <a class="navbar-brand mb-0" href="index.html">
             <img alt="Brand" src="img/logo.png" width="30px" height="30px">
             <span class="navbar-brand mb-0 h1 text-white">FOGO</span>
         </a>
@@ -22,17 +22,17 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About me</a>
+                    <a class="nav-link" href="https://www.facebook.com/nguyenph01" target="blank">About me</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="showcase">
-    <div class="showcase-share">
+    <!-- <div class="showcase-share">
         <div class="d-flex justify-content-center h-100">
             <div id="search-box" class="col-md-6 mt-5">
                 <i class="fas fa-map-marker-alt"></i>
@@ -42,7 +42,7 @@
                     </span>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="showcase-slogan">
         <h1>Fogo</h1>
         <h3>Ứng dụng tìm kiếm phòng trọ!</h3>
@@ -58,37 +58,37 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-6 col-md-3">
+                            <div id="room-price" class="col-6 col-md-3">
                                 <div class="lead text-muted">Giá phòng</div>
-                                3,000,000 /tháng
+                                <span>3,000,000 /tháng</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-area" class="col-6 col-md-3">
                                 <div class="lead text-muted">Diện tích</div>
-                                20 m2
+                                <span>20 m2</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-deposit"class="col-6 col-md-3">
                                 <div class="lead text-muted">Đặt cọc</div>
-                                3,000,000
+                                <span>3,000,000</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-capacity" class="col-6 col-md-3">
                                 <div class="lead text-muted">Sức chứa</div>
-                                3 người
+                                <span>3 người</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-electric" class="col-6 col-md-3">
                                 <div class="lead text-muted">Điện</div>
-                                3k5/số
+                                <span>3k5/số</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-water" class="col-6 col-md-3">
                                 <div class="lead text-muted">Nước</div>
-                                30k/khối
+                                <span>30k/khối</span>
                             </div>
-                            <div class="col-6 col-md-3">
+                            <div id="room-other_fee" class="col-6 col-md-3">
                                 <div class="lead text-muted">Phí khác</div>
-                                Không có
+                                <span>Không có</span>
                             </div>
-                            <div class="col-12">
+                            <div id="room-address" class="col-12">
                                 <div class="lead text-muted">Địa chỉ</div>
-                                Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội
+                                <span>Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội</span>
                             </div>
                         </div>
 
@@ -117,7 +117,7 @@
                                 <span>Giường</span>
                             </div>
 
-                            <div class="col-6 col-md-3 lead">
+                            <div id="room-bathroom" class="col-6 col-md-3 lead">
                                 <i class="fas fa-shower text-main"></i>
                                 <span>Phòng tắm</span>
                             </div>
@@ -133,8 +133,6 @@
                                 <i class="fas fa-warehouse text-main"></i>
                                 <span>Gác xép</span>
                             </div>
-
-
                             <div id="room-parking_area" class="col-6 col-md-3 lead">
                                 <i class="fas fa-bicycle text-main"></i>
                                 <span>Gửi xe</span>
@@ -191,7 +189,7 @@
                 </div>
                 <div class="card mt-3">
                     <div class="card-header">
-                        <span><i class="fas fa-exclamation text-fogo"></i> Một số lưu ý</span>
+                        <span><i class="far fa-user text-fogo" style="font-weight:600;"></i> Thông tin chủ phòng</span>
                     </div>
                     <div class="card-body">
 
@@ -232,6 +230,8 @@
         </div>
     </div>
 </div>
+<script src="./js/db.js"></script>
+<script src="./js/detail.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
