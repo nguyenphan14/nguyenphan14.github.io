@@ -217,8 +217,3 @@ img.room-thumbnail {
     text-decoration: none;
     cursor: pointer;
 }
-
-.fa-house-user {
-    font-size: 3rem;
-    color: var(--fogo-color);
-}
