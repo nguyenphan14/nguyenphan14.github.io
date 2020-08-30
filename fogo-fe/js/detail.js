@@ -1,11 +1,13 @@
 let roomId = localStorage.getItem('roomId').split(",");
 let detail = roomId[roomId.length-1];
-
+const containerImg = document.getElementById('container-img');
 let data = details.filter((room) => {
     return room.id === detail;
 })
 renderDetail(data[0]);
-
+renderImg(data[0]);
+renderHost(data[0]);
+renderNote(data[0])
 function renderDetail(room) {
     document.querySelector('#room-price > span').textContent = `${room.details.price.value*1000000}`;
     document.querySelector('#room-area > span').textContent = `${room.details.area} m²`;
@@ -63,3 +65,57 @@ function renderDetail(room) {
     
 }
 
+
+/* Images modal */
+
+function renderModal(event) {
+    let modal = document.querySelector(`.${event.target.id}`);
+    modal.style.display = 'block';
+    console.log(modal);
+    let closeBtns = document.getElementsByClassName('close-btn');
+    for(let btn of closeBtns) {
+        btn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        })
+    }
+}
+
+/* render img */
+
+
+console.log(containerImg);
+
+function renderImg(room) {
+    for(let i = 0; i < room.images.length; i++) {
+        let div = document.createElement('div');
+        div.innerHTML = `
+        <img id="img-${i}"class="img-fluid p-1 room-img" onclick="renderModal(event)" src="${room.images[i]}">
+        <div class="modal img-${i}">
+            <span class="close-btn">&times;</span>
+            <div class="modal-content row">
+                <img class="img-fluid justify-content-center" src="${room.images[i]}">
+            </div>
+        </div>
+        `
+        containerImg.append(div);
+    }
+}
+
+/* Render Host */
+
+function renderHost(room) {
+    const host = document.getElementById('host-info');
+    let div = document.createElement('div');
+    div.innerHTML = `
+        <p class="text-secondary font-weight-bold">Chủ trọ:  ${room.owner.name}</p>
+        <p class="text-secondary font-weight-bold">SĐT:  ${room.owner.phoneNumber}</p>
+    `
+    host.append(div);
+}
+
+function renderNote(room) {
+    const note = document.getElementById('room-note');
+    note.innerHTML = `
+        ${room.details.note.replace(/\n/gi, '<br>')}
+    `
+}
