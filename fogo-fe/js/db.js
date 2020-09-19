@@ -1,3 +1,17 @@
+const account = {
+    "user": [
+        {
+            "username": "user1",
+            "phone": "0865510025",
+            "password": "123123"
+        }
+    ],
+    "admin": {
+        "username": "admin",
+        "password": "admin"
+    }
+}
+
 const roomData =
 {
     "data": [

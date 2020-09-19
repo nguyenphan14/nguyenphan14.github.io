@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e5dd1fe898.js" crossorigin="anonymous"></script>
+    <title>Fogo</title>
+</head>
+
+<body>
+    <div class="container login-card">
+        <div class="text-decoration-none text-left border-left" style="padding-left: 1rem;">Ứng dụng tìm phòng trọ</div>
+        <div class="row">
+            <div class="col-md-8 fogo-img">
+                <img src="img/Fogo.png" class="img-fluid float-left">
+            </div>
+            <div class="col-md-4">
+                <div class="container border-left text-center">
+                    <h1>Sign in</h1>    
+                    <div class="col-md-12 ">
+                        <div class="login-or">
+                           <hr class="hr-or">
+                        </div>
+                    </div>
+                    <div class="login-form form ">
+                        <div>
+                            <div class="form-group text-left">
+                                <label>Username</label>
+                                <input type="text" name="username"  class="form-control" aria-describedby="userHelp" id="username" placeholder="Ex: nguyen14">
+                                <small id="userHelp" class="form-text text-muted"></small>
+                            </div>
+                            <p></p>
+                            <div class="form-group text-left">
+                                <label>Password</label>
+                                <input type="password" name="password" id="password"  class="form-control" aria-describedby="pwdHelp" placeholder="Ex: 123456">
+                                <small id="pwdHelp" class="form-text text-muted"></small>
+                            </div>
+                            <div class="col-md-12 text-right">
+                                <button type="submit" class="btn btn-login" style="font-weight: 600;" id="login">Login</button>
+                            </div>
+                            <div class="form-group">
+                                <p class="text-center">Don't have account? <a href="./register.html" id="signup">Sign up here</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 4rem;">
+            <p>@powerbyFogoteam</p>
+        </div>
+    </div>
+    <script src="./js/db.js"></script>
+    <script src="./js/login.js"></script>
+</body>
+</html>

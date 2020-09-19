@@ -93,7 +93,7 @@ function renderImg(room) {
         <div class="modal img-${i}">
             <span class="close-btn">&times;</span>
             <div class="modal-content row">
-                <img class="img-fluid justify-content-center" src="${room.images[i]}">
+                <img class="modal-img justify-content-center" src="${room.images[i]}">
             </div>
         </div>
         `

@@ -195,6 +195,27 @@ img.room-thumbnail {
     animation-duration: 0.6s;
 }
 
+
+.modal-img {
+    height: 80vh;
+}
+
+.flex-end {
+    justify-content: flex-end !important;
+}
+
+.border-none {
+    border: none;
+}
+
+.border-none:focus {
+    outline: none;
+}
+
+.border-left {
+    border: 0 0 0 3px;
+}
+
 @keyframes zoom {
     from {transform:scale(0)}
     to {transform:scale(1)}
@@ -217,3 +238,109 @@ img.room-thumbnail {
     text-decoration: none;
     cursor: pointer;
 }
+ 
+/* Login */
+
+.container-fluid {
+    margin-top: 4rem;
+    width: 100%;
+  }
+  
+  .fogo-img > img {
+    margin: 4rem 0;
+    left: 0;
+  }
+  
+  @media only screen and (min-width: 600px) {
+      .fogo-img > img {
+          padding: 0 4rem;
+      }
+  }
+  
+  .fogo-img > div {
+    margin-left: 2rem;
+    font-size: 1rem;
+  }
+  
+  .btn-google,
+  .btn-facebook {
+    min-width: 90%;
+    margin-top: 1rem;
+    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2rem !important;
+    color: #7f8fae !important;
+    font-weight: 700 !important;
+  }
+  
+  .btn-light > img {
+    width: 2rem;
+    margin: 0 0.6rem;
+  }
+  
+  .login-or {
+    position: relative;
+    color: #aaa;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .span-or {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -2px;
+    margin-left: -25px;
+    background-color: #fff;
+    width: 50px;
+    text-align: center;
+  }
+  .hr-or {
+    height: 1px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+  
+  .login-form {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1rem;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    outline: 0;
+    max-width: 500px;
+  }
+  
+  .login-form input {
+    border-radius: 2rem;
+    padding: 1.6rem;
+  }
+
+.login-card {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    margin: 2rem;
+    padding: 0.6rem 0;
+}
+
+.btn-login {
+    border-radius: 1.3rem !important;
+    background-color:white !important;
+    transition: background 0.5s !important;
+}
+
+.btn-login:hover {
+    border: 1px solid #ced4da !important;
+    background-image: linear-gradient(45deg, white, rgb(242, 92, 5));
+}
+
+/* #phone {
+    border: 1px solid red !important;
+}
+
+#phone:focus {
+    border: 1px solid red !important;
+    box-shadow: 0 0 0 0.2rem rgba(255,0,0,.25);
+} */
