@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="container login-card">
+    <div class="container login-card" id="login-page">
         <div class="text-decoration-none text-left border-left" style="padding-left: 1rem;">Ứng dụng tìm phòng trọ</div>
         <div class="row">
             <div class="col-md-8 fogo-img">
@@ -43,9 +43,61 @@
                                 <button type="submit" class="btn btn-login" style="font-weight: 600;" id="login">Login</button>
                             </div>
                             <div class="form-group">
-                                <p class="text-center">Don't have account? <a href="./register.html" id="signup">Sign up here</a></p>
+                                <p class="text-center">Don't have account? <a href="#" id="sign-up-link">Sign up here</a></p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="margin-top: 4rem;">
+            <p>@powerbyFogoteam</p>
+        </div>
+    </div>
+    <div class="container login-card" id="register-page">
+        <div class="text-decoration-none text-left border-left" style="padding-left: 1rem;">Ứng dụng tìm phòng trọ</div>
+        <div class="row">
+            <div class="col-6 col-md-8 fogo-img">
+                <img src="img/Fogo.png" class="img-fluid float-left">
+            </div>
+            <div class="col-4 col-md-4">
+                <div class="container border-left text-center">
+                    <h1>Sign up</h1>
+                    <div class="col-md-12 ">
+                        <div class="login-or">
+                           <hr class="hr-or">
+                        </div>
+                    </div>
+                    <div class="login-form form ">
+                        <div action="" method="post" name="login">
+                                <div class="form-group text-left">
+                                    <label>Username</label>
+                                    <input type="text" name="username"  class="form-control" id="username-reg" aria-describedby="userRegHelp" placeholder="Ex: nguyen14">
+                                    <small id="userRegHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group text-left">
+                                    <label>Number Phone</label>
+                                    <input type="tel" name="phone"  class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Ex: 0865510xxx">
+                                    <small id="phoneHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="form-group text-left">
+                                    <label>Password</label>
+                                    <input type="password" name="password" id="password-reg"  class="form-control" aria-describedby="passwordHelp" placeholder="Enter Password">
+                                    <small id="passwordHelp" class="form-text text-muted"></small>
+
+                                </div>
+                                <div class="form-group text-left">
+                                    <label>Confirm password</label>
+                                    <input type="password" name="password" id="cf-password"  class="form-control" aria-describedby="confirmPasswordHelp" placeholder="Enter Password">
+                                    <small id="confirmPasswordHelp" class="form-text text-muted"></small>
+                                </div>
+                                <div class="col-md-12 text-right">
+                                    <button type="submit" class="btn btn-login" style="font-weight: 600;" id="sign-up">Sign up</button>
+                                </div>
+                                <div class="form-group">
+                                    <p class="text-center">Have an account? <a href="#" id="sign-in-link">Sign in here</a></p>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>
