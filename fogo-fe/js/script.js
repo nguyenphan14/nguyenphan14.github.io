@@ -25,7 +25,7 @@ function addAllBtn() {
 function getDetail() {
     let detail = this.id;
     seenRooom.push(detail);
-    localStorage.setItem('roomId', seenRooom);
+    sessionStorage.setItem('roomId', seenRooom);
 }
 
 function renderRoom(room) {

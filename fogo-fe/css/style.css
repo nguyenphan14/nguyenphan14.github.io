@@ -206,6 +206,7 @@ img.room-thumbnail {
 
 .border-none {
     border: none;
+    color: #fff !important;
 }
 
 .border-none:focus {
@@ -214,6 +215,10 @@ img.room-thumbnail {
 
 .border-left {
     border: 0 0 0 3px;
+}
+
+.space-between {
+    justify-content: space-between !important;
 }
 
 @keyframes zoom {
@@ -348,3 +353,4 @@ img.room-thumbnail {
 #register-page {
     display: none;
 }
+

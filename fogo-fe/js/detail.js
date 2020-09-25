@@ -1,4 +1,4 @@
-let roomId = localStorage.getItem('roomId').split(",");
+let roomId = sessionStorage.getItem('roomId').split(",");
 let detail = roomId[roomId.length-1];
 const containerImg = document.getElementById('container-img');
 let data = details.filter((room) => {

@@ -3,41 +3,31 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const userHelp = document.getElementById('userHelp');
 const pwdHelp = document.getElementById('pwdHelp');
+let users = [];
 
 loginBtn.addEventListener('click', () => {
     if(username.value === account.admin.username && password.value === account.admin.password) {
         /* execute with admin*/
         console.log('Admin is signed');
     }
-    /* else if(validateAcc(username, password)) {
+    else if(validateAcc(username, password)) {
         console.log('User signed');
-        
-    } */
-    let testObj = [
-        {
-            'name': 'Nuguyen',
-            'age': '19'
-        }, 
-        {
-            'name': 'Dung',
-            'age': '18'
-        }
-    ]
-    console.log(
-        testObj.map((user) => {
-            return JSON.stringify(user)
-        }).toString()
-    )
+        location.replace('index.html');
+    }
 })
 
 function validateAcc(username, password) {
-    let res = account.user.find((user) => {
+    let userList = convertUser(localStorage.user);
+    let res = userList.find((user) => {
         return user.username === username.value;
     })
-    if(res.password === password.value) {
+    if(res === undefined) {
+        alert('Your username or password may be incorrect!!!');
+    } else if (res.password === password.value) {
+        pwdHelp.textContent = ""
         return true
     } else {
-        pwdHelp.textContent = "Incorrect password"
+        alert('Your username or password may be incorrect!!!');
     }
 }
 
@@ -86,13 +76,15 @@ phone.addEventListener('keyup', (e) => {
 
 signUp.addEventListener('click', () => {
     if(validateUsername(usernameReg) && validatePhone(phone) && validatePwd(passwordReg) && validateCfpwd(confirmPassword)) {
-        account.user.push({
+        let userReg = {
             "username": usernameReg.value,
             "phone": phone.value,
             "password": passwordReg.value
-        })
-        signUp.disabled = true;
-        
+        }
+        users.push(JSON.stringify(userReg));
+        localStorage.setItem('user', users);     
+        location.replace('index.html');
+        signUp.disabled = true;   
     }
 })
 
@@ -100,7 +92,6 @@ function validateUsername(username) {
     if(username.value === '') {
         userRegHelp.textContent = 'Fill this field';
         return false
-        
     } else {
         userRegHelp.textContent = '';   
         return true
@@ -150,9 +141,20 @@ const regPage = document.getElementById('register-page')
 document.getElementById('sign-up-link').addEventListener('click', (eve) => {
     loginPage.style.display = 'none';
     regPage.style.display = 'block';
+    signUp.disabled = false;
 })
 
 document.getElementById('sign-in-link').addEventListener('click', (eve) => {
     loginPage.style.display = 'block';
     regPage.style.display = 'none';
 })
+
+/* Convert String Array of Users */
+
+function convertUser(localStorageData) {
+    let convertedUsers = localStorageData.split('},');
+    for(let i = 0; i < convertedUsers.length-1; i++) {
+        convertedUsers[i] += "}";
+    }
+    return convertedUsers.map((user) => JSON.parse(user));
+}
