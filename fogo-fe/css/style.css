@@ -49,6 +49,7 @@
 .room-preview:hover {
     text-decoration: none;
     transform: scale(1.01);
+    cursor: pointer;
 }
 img.room-thumbnail {
     width: 100%;
@@ -354,3 +355,6 @@ img.room-thumbnail {
     display: none;
 }
 
+#room-page {
+    display: none;
+}

@@ -23,7 +23,7 @@
         <div class="collapse navbar-collapse space-between" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#" id="home-link">Home</a>
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="https://www.facebook.com/nguyenph01" target="blank">About me</a>
@@ -61,7 +61,7 @@
         <h3>Ứng dụng tìm kiếm phòng trọ!</h3>
     </div>
 </div>
-<div class="main">
+<div class="main" id="home-page">
     <div class="container">
         <div class="row pt-5">
             <div class="col-md-8">
@@ -116,6 +116,189 @@
                     </div>
                     <div class="card-body">
                         NULL
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main" id="room-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 pt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <span><i class="fas fa-edit text-fogo"></i> Thông tin phòng</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div id="room-price" class="col-6 col-md-3">
+                                <div class="lead text-muted">Giá phòng</div>
+                                <span>3,000,000 /tháng</span>
+                            </div>
+                            <div id="room-area" class="col-6 col-md-3">
+                                <div class="lead text-muted">Diện tích</div>
+                                <span>20 m2</span>
+                            </div>
+                            <div id="room-deposit"class="col-6 col-md-3">
+                                <div class="lead text-muted">Đặt cọc</div>
+                                <span>3,000,000</span>
+                            </div>
+                            <div id="room-capacity" class="col-6 col-md-3">
+                                <div class="lead text-muted">Sức chứa</div>
+                                <span>3 người</span>
+                            </div>
+                            <div id="room-electric" class="col-6 col-md-3">
+                                <div class="lead text-muted">Điện</div>
+                                <span>3k5/số</span>
+                            </div>
+                            <div id="room-water" class="col-6 col-md-3">
+                                <div class="lead text-muted">Nước</div>
+                                <span>30k/khối</span>
+                            </div>
+                            <div id="room-other_fee" class="col-6 col-md-3">
+                                <div class="lead text-muted">Phí khác</div>
+                                <span>Không có</span>
+                            </div>
+                            <div id="room-address" class="col-12">
+                                <div class="lead text-muted">Địa chỉ</div>
+                                <span>Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <span><i class="fas fa-star text-fogo"></i> Tiện ích</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div id="room-air_conditioner" class="col-6 col-md-3 lead" >
+                                <i class="fas fa-fan text-main"></i>
+                                <span>Điều hòa</span>
+                            </div>
+                            <div id="room-balcony" class="col-6 col-md-3 lead">
+                                <i class="fas fa-kaaba text-main"></i>
+                                <span>Ban công</span>
+                            </div>
+                            <div id="room-closet" class="col-6 col-md-3 lead">
+                                <i class="fas fa-box text-main"></i>
+                                <span>Tủ đồ</span>
+                            </div>
+                            <div id="room-bed" class="col-6 col-md-3 lead">
+                                <i class="fas fa-bed text-main"></i>
+                                <span>Giường</span>
+                            </div>
+
+                            <div id="room-bathroom" class="col-6 col-md-3 lead">
+                                <i class="fas fa-shower text-main"></i>
+                                <span>Phòng tắm</span>
+                            </div>
+                            <div id="room-cooking_allowed" class="col-6 col-md-3 lead" >
+                                <i class="fas fa-utensils text-main"></i>
+                                <span>Nấu ăn</span>
+                            </div>
+                            <div id="room-fridge" class="col-6 col-md-3 lead">
+                                <i class="fas fa-door-open text-main"></i>
+                                <span>Tủ lạnh</span>
+                            </div>
+                            <div id="room-garret" class="col-6 col-md-3 lead">
+                                <i class="fas fa-warehouse text-main"></i>
+                                <span>Gác xép</span>
+                            </div>
+                            <div id="room-parking_area" class="col-6 col-md-3 lead">
+                                <i class="fas fa-bicycle text-main"></i>
+                                <span>Gửi xe</span>
+                            </div>
+                            <div id="room-owner_living" class="col-6 col-md-3 lead">
+                                <i class="fas fa-key text-main"></i>
+                                <span>Tự do</span>
+                            </div>
+                            <div id="pet_allowed" class="col-6 col-md-3 lead">
+                                <i class="fas fa-paw text-main"></i>
+                                <span>Thú cưng</span>
+                            </div>
+                            <div id="room-television" class="col-6 col-md-3 lead">
+                                <i class="fas fa-tv text-main"></i>
+                                <span>Tivi</span>
+                            </div>
+
+                            <div id="room-washing_machine" class="col-6 col-md-3 lead">
+                                <i class="fas fa-dumpster text-main"></i>
+                                <span>Máy giặt</span>
+                            </div>
+                            <div id="room-water_heater" class="col-6 col-md-3 lead">
+                                <i class="fas fa-dumpster-fire text-main"></i>
+                                <span>Máy nóng lạnh</span>
+                            </div>
+                            <div id="room-wifi" class="col-6 col-md-3 lead">
+                                <i class="fas fa-wifi text-main"></i>
+                                <span>Wifi</span>
+                            </div>
+                            <div id="room-window" class="col-6 col-md-3 lead">
+                                <i class="fas fa-columns text-main"></i>
+                                <span>Cửa sổ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <span><i class="fas fa-info-circle text-fogo"></i> Mô tả chi tiết</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text" id="room-note">
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pt-md-5 pt-3">
+                <div class="card">
+                    <div class="card-header">
+                        <span><i class="fas fa-images text-fogo"></i> Hình ảnh</span>
+                    </div>
+                    <div class="card-body container row" id="container-img">
+                        <!-- <div class="row">
+                            <img id="img-1"class="img-fluid p-1 room-img" onclick="renderModal(event)" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055816787_IMG_1596798089064_1597055634473.jpg">
+                            <div class="modal img-1">
+                                <span class="close-btn">&times;</span>
+                                <div class="modal-content row">
+                                    <img class="img-fluid justify-content-center" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055816787_IMG_1596798089064_1597055634473.jpg">
+                                </div>
+                            </div>
+                            <img id="img-2" class="img-fluid p-1 room-img" onclick="renderModal(event)" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055820589_IMG_1596798080401_1597055637605.jpg">
+                            <div class="modal img-2">
+                                <span class="close-btn">&times;</span>
+                                <div class="modal-content row">
+                                    <img class="img-fluid justify-content-center" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055820589_IMG_1596798080401_1597055637605.jpg">
+                                </div>
+                            </div>
+                            <img id="img-3" class="img-fluid p-1 room-img" onclick="renderModal(event)" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055825367_IMG_1596798121048_1597055631225.jpg">
+                            <div class="modal img-3">
+                                <span class="close-btn">&times;</span>
+                                <div class="modal-content row">
+                                    <img class="img-fluid justify-content-center" src="https://bayleaf.s3.amazonaws.com/property-images%2F1597055825367_IMG_1596798121048_1597055631225.jpg">
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <span><i class="far fa-user text-fogo" style="font-weight:600;"></i> Thông tin chủ phòng</span>
+                    </div>
+                    <div class="card-body" id="host-info">
+                        <div class="col-12 text-center">
+                            <img src="/fogo-fe/img/cuuvi.png" width="100rem">
+                        </div>
+                        <!-- <p class="text-secondary font-weight-bold">
+                            Phan Hoang Nguyen
+                        </p>
+                        <p class="text-secondary font-weight-bold">
+                            SDT: 0865510025
+                        </p> -->
                     </div>
                 </div>
             </div>

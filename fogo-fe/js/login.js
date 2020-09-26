@@ -9,6 +9,7 @@ loginBtn.addEventListener('click', () => {
     if(username.value === account.admin.username && password.value === account.admin.password) {
         /* execute with admin*/
         console.log('Admin is signed');
+        location.replace('index.html');
     }
     else if(validateAcc(username, password)) {
         console.log('User signed');
@@ -79,7 +80,7 @@ signUp.addEventListener('click', () => {
         let userReg = {
             "username": usernameReg.value,
             "phone": phone.value,
-            "password": passwordReg.value
+            "password": passwordReg.value,
         }
         users.push(JSON.stringify(userReg));
         localStorage.setItem('user', users);     
