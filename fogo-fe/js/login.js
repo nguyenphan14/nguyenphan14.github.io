@@ -81,6 +81,7 @@ signUp.addEventListener('click', () => {
             "username": usernameReg.value,
             "phone": phone.value,
             "password": passwordReg.value,
+            "status": "online"
         }
         users.push(JSON.stringify(userReg));
         localStorage.setItem('user', users);     
@@ -94,8 +95,13 @@ function validateUsername(username) {
         userRegHelp.textContent = 'Fill this field';
         return false
     } else {
-        userRegHelp.textContent = '';   
-        return true
+        if(hasWhiteSpace(username.value)) {
+            userRegHelp.textContent = 'Username don\'t use white space';
+            return false;
+        } else {
+            userRegHelp.textContent = '';
+            return true
+        }
     }
 }
 
@@ -135,6 +141,9 @@ function validateCfpwd(confirmPassword) {
     }
 }
 
+function hasWhiteSpace(s) {
+    return s.indexOf(' ') >= 0;
+}
 
 /* Direct (Login / Register) page */
 const loginPage = document.getElementById('login-page')
@@ -159,3 +168,8 @@ function convertUser(localStorageData) {
     }
     return convertedUsers.map((user) => JSON.parse(user));
 }
+
+function renderUserData(user) {
+
+}
+

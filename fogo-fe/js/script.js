@@ -2,6 +2,22 @@ const homePage = document.getElementById('home-page');
 const roomPage = document.getElementById('room-page');
 const roomList = document.querySelector('#room-card');
 const homeLink = document.getElementById('home-link');
+const logOut = document.getElementById('log-out');
+
+/* 
+let userList = convertUser(localStorage.user);
+
+console.log(userList)
+let currentUser = userList.find((user) => {
+    return user.status === "online";
+})
+
+document.getElementById('username').innerHTML = currentUser.username */
+
+/* Log out */
+logOut.addEventListener('click', () => {
+    location.replace('login.html');
+})
 
 const seenRooom = [];
 for(let i = 0; i < 5; i++) {
@@ -218,4 +234,12 @@ function homeToRoom() {
 function roomToHome() {
     homePage.style.display = 'block';
     roomPage.style.display = 'none';
+}
+
+function convertUser(localStorageData) {
+    let convertedUsers = localStorageData.split('},');
+    for(let i = 0; i < convertedUsers.length-1; i++) {
+        convertedUsers[i] += "}";
+    }
+    return convertedUsers.map((user) => JSON.parse(user));
 }
