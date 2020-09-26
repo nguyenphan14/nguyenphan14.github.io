@@ -89,7 +89,9 @@ function renderImg(room) {
     for(let i = 0; i < room.images.length; i++) {
         let div = document.createElement('div');
         div.innerHTML = `
-        <img id="img-${i}"class="img-fluid p-1 room-img" onclick="renderModal(event)" src="${room.images[i]}">
+        <a href="${room.images[i]}" data-lightbox="image-1">
+            <img id="img-${i}"class="img-fluid p-1 room-img" src="${room.images[i]}">
+        </a>
         <div class="modal img-${i}">
             <span class="close-btn">&times;</span>
             <div class="modal-content row">
