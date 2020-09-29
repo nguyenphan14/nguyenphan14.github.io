@@ -22,7 +22,7 @@ const roomData =
             "area": 30,
             "gender": "any",
             "price": 3000000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597055816787_IMG_1596798089064_1597055634473.jpg"
         },
         {
@@ -32,7 +32,7 @@ const roomData =
             "area": 32,
             "gender": "any",
             "price": 3200000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597900594925_FB_IMG_1597900205158.jpg"
         },
         {
@@ -42,7 +42,7 @@ const roomData =
             "area": 25,
             "gender": "any",
             "price": 4000000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597900442421_FB_IMG_1597809931053.jpg"
         },
         {
@@ -52,7 +52,7 @@ const roomData =
             "area": 25,
             "gender": "any",
             "price": 2500000,
-            "address": "*** Nguyễn Khuyến, Phường Văn Quán, Quận Hà Đông, Hà Nội",
+            "address": "Đường Nguyễn Khuyến, Phường Văn Quán, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597640475917_IMG_4002.JPG"
         },
         {
@@ -62,7 +62,7 @@ const roomData =
             "area": 30,
             "gender": "any",
             "price": 3000000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597638896017_IMG_2378.JPG"
         },
         {
@@ -72,7 +72,7 @@ const roomData =
             "area": 30,
             "gender": "any",
             "price": 3000000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597600129133_IMG_6465.JPG"
         },
         {
@@ -82,7 +82,7 @@ const roomData =
             "area": 42,
             "gender": "any",
             "price": 3200000,
-            "address": "*** Yên Xá, Phường Văn Quán, Quận Hà Đông, Hà Nội",
+            "address": "Đường Yên Xá, Phường Văn Quán, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597462515979_FB_IMG_1597460730692.jpg"
         },
         {
@@ -92,7 +92,7 @@ const roomData =
             "area": 30,
             "gender": "any",
             "price": 3000000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597461913103_IMG_20200815_102506.jpg"
         },
         {
@@ -102,7 +102,7 @@ const roomData =
             "area": 42,
             "gender": "any",
             "price": 2900000,
-            "address": "*** Yên Xá, Phường Văn Quán, Quận Hà Đông, Hà Nội",
+            "address": "Đường Yên Xá, Phường Văn Quán, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1589377208703_IMG_1589337151324_1589345586881.jpg"
         },
         {
@@ -112,7 +112,7 @@ const roomData =
             "area": 30,
             "gender": "any",
             "price": 3200000,
-            "address": "*** Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
+            "address": "Đường Thanh Bình, Phường Mộ Lao, Quận Hà Đông, Hà Nội",
             "image": "https://bayleaf.s3.amazonaws.com/property-images%2F1597451725953_IMG_8842.HEIC"
         }
     ],
