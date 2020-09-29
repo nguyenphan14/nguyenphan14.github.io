@@ -9,11 +9,11 @@ loginBtn.addEventListener('click', () => {
     if(username.value === account.admin.username && password.value === account.admin.password) {
         /* execute with admin*/
         console.log('Admin is signed');
-        location.replace('index.html');
+        // location.replace('index.html');
     }
     else if(validateAcc(username, password)) {
         console.log('User signed');
-        location.replace('index.html');
+        location.assign('index.html');
     }
 })
 
@@ -76,17 +76,17 @@ phone.addEventListener('keyup', (e) => {
 })
 
 signUp.addEventListener('click', () => {
+    
     if(validateUsername(usernameReg) && validatePhone(phone) && validatePwd(passwordReg) && validateCfpwd(confirmPassword)) {
         let userReg = {
             "username": usernameReg.value,
             "phone": phone.value,
             "password": passwordReg.value,
-            "status": "online"
         }
         users.push(JSON.stringify(userReg));
         localStorage.setItem('user', users);     
-        location.replace('index.html');
-        signUp.disabled = true;   
+        // location.assign('index.html');
+        // signUp.disabled = true;   
     }
 })
 
@@ -97,7 +97,10 @@ function validateUsername(username) {
     } else {
         if(hasWhiteSpace(username.value)) {
             userRegHelp.textContent = 'Username don\'t use white space';
-            return false;
+            return false
+        } else if(username.value === 'admin') {
+            userRegHelp.textContent = 'Can\'t use this usernames';
+            return false
         } else {
             userRegHelp.textContent = '';
             return true

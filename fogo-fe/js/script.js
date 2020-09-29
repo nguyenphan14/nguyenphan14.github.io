@@ -15,9 +15,9 @@ let currentUser = userList.find((user) => {
 document.getElementById('username').innerHTML = currentUser.username */
 
 /* Log out */
-logOut.addEventListener('click', () => {
+/* logOut.addEventListener('click', () => {
     location.replace('login.html');
-})
+}) */
 
 const seenRooom = [];
 for(let i = 0; i < 5; i++) {
@@ -49,12 +49,15 @@ function addAllBtn() {
 
 function getDetail() {
     let detail = this.id;
-    seenRooom.push(detail);
-    sessionStorage.setItem('roomId', seenRooom);
-    renderDetail(data[0]);
-    renderImg(data[0]);
-    renderHost(data[0]);
-    renderNote(data[0]);
+    /* seenRooom.push(detail);
+    sessionStorage.setItem('roomId', seenRooom); */
+    let data = details.filter((room) => {
+        return room.id === detail;
+    })
+    renderDetail(data[data.length - 1]);
+    renderImg(data[data.length - 1]);
+    renderHost(data[data.length - 1]);
+    renderNote(data[data.length - 1]);
     homeToRoom();
 }
 
@@ -105,16 +108,18 @@ function renderRoom(room) {
 
 /* Render detail */
 
-let roomId = sessionStorage.getItem('roomId').split(",");
+/* let roomId = sessionStorage.getItem('roomId').split(",");
 let detail = roomId[roomId.length-1];
-const containerImg = document.getElementById('container-img');
 let data = details.filter((room) => {
     return room.id === detail;
-})
+}) */
 /* renderDetail(data[0]);
 renderImg(data[0]);
 renderHost(data[0]);
-renderNote(data[0]); */
+renderNote(data[0]);
+homeToRoom(); */
+
+const containerImg = document.getElementById('container-img');
 function renderDetail(room) {
     document.querySelector('#room-price > span').textContent = `${room.details.price.value*1000000}`;
     document.querySelector('#room-area > span').textContent = `${room.details.area} m²`;
@@ -190,6 +195,7 @@ function renderModal(event) {
 /* render img */
 
 function renderImg(room) {
+    removeImg(containerImg);
     for(let i = 0; i < room.images.length; i++) {
         let div = document.createElement('div');
         div.innerHTML = `
@@ -205,6 +211,14 @@ function renderImg(room) {
     }
 }
 
+/* Remove all imgs */
+
+function removeImg(imgConainter) {
+    while(imgConainter.firstChild) {
+        imgConainter.removeChild(imgConainter.firstChild);
+    }
+}
+
 /* Render Host */
 
 function renderHost(room) {
@@ -214,7 +228,7 @@ function renderHost(room) {
         <p class="text-secondary font-weight-bold">Chủ trọ:  ${room.owner.name}</p>
         <p class="text-secondary font-weight-bold">SĐT:  ${room.owner.phoneNumber}</p>
     `
-    host.append(div);
+    host.replaceChild(div, host.firstChild);
 }
 
 function renderNote(room) {
