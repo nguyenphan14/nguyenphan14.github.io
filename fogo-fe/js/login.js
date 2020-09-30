@@ -3,7 +3,7 @@ const username = document.getElementById('username');
 const password = document.getElementById('password');
 const userHelp = document.getElementById('userHelp');
 const pwdHelp = document.getElementById('pwdHelp');
-let users = [];
+let users = "";
 
 loginBtn.addEventListener('click', () => {
     if(username.value === account.admin.username && password.value === account.admin.password) {
@@ -83,10 +83,15 @@ signUp.addEventListener('click', () => {
             "phone": phone.value,
             "password": passwordReg.value,
         }
-        users.push(JSON.stringify(userReg));
+        if(localStorage.user === undefined) {
+            users = "";
+            users += JSON.stringify(userReg);
+        } else {
+            users += ',' + JSON.stringify(userReg);
+        }
         localStorage.setItem('user', users);     
-        // location.assign('index.html');
-        // signUp.disabled = true;   
+        location.assign('index.html');
+        signUp.disabled = true;   
     }
 })
 
