@@ -76,7 +76,6 @@ phone.addEventListener('keyup', (e) => {
 })
 
 signUp.addEventListener('click', () => {
-    
     if(validateUsername(usernameReg) && validatePhone(phone) && validatePwd(passwordReg) && validateCfpwd(confirmPassword)) {
         let userReg = {
             "username": usernameReg.value,
@@ -87,6 +86,7 @@ signUp.addEventListener('click', () => {
             users = "";
             users += JSON.stringify(userReg);
         } else {
+            users = localStorage.user;
             users += ',' + JSON.stringify(userReg);
         }
         localStorage.setItem('user', users);     
